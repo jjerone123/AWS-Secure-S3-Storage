@@ -38,3 +38,6 @@ THIS PROJECT DEMOSTRATES MY UNDERSTANDINGS OF AWS S3 , CLOUD STORAGE AND BASIC S
 - **IAM group:** s3-view-only holds the user and carries the permissions.
 - **IAM policy:** s3-portfolio-read-only-policy grants read-only access to the bucket.
 - **Access flow:** user, then group, then policy, then bucket. The user can list and read objects but cannot write or delete.
+
+
+![S3 bucket objects](s3-objects.png)
