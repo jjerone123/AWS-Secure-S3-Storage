@@ -22,3 +22,10 @@ THIS PROJECT DEMOSTRATES MY UNDERSTANDINGS OF AWS S3 , CLOUD STORAGE AND BASIC S
 - **s3:GetObject:** Allowed (explicit allow in the group policy).
 - **s3:PutObject:** Implicitly denied (no matching allow statement).
 - Result: the user can read objects but cannot upload or change them.
+
+
+## Cost Awareness
+
+- S3 charges for storage used, requests made, and data transferred out. For a small practice bucket with a few tiny files, expected cost is very low, but I check the AWS Billing dashboard to confirm actual charges.
+- Versioning keeps old copies of files, which can increase storage over time. A lifecycle rule to expire old versions is a planned future improvement.
+- IAM users, groups, and policies have no charge.
