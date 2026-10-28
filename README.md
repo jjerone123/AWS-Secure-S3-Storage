@@ -29,3 +29,12 @@ THIS PROJECT DEMOSTRATES MY UNDERSTANDINGS OF AWS S3 , CLOUD STORAGE AND BASIC S
 - S3 charges for storage used, requests made, and data transferred out. For a small practice bucket with a few tiny files, expected cost is very low, but I check the AWS Billing dashboard to confirm actual charges.
 - Versioning keeps old copies of files, which can increase storage over time. A lifecycle rule to expire old versions is a planned future improvement.
 - IAM users, groups, and policies have no charge.
+
+
+## Architecture
+
+- **Amazon S3 bucket:** aws-secure-storage-portfolio-2026 in us-east-1 stores the project files.
+- **IAM user:** s3-training-user is the test identity.
+- **IAM group:** s3-view-only holds the user and carries the permissions.
+- **IAM policy:** s3-portfolio-read-only-policy grants read-only access to the bucket.
+- **Access flow:** user, then group, then policy, then bucket. The user can list and read objects but cannot write or delete.
